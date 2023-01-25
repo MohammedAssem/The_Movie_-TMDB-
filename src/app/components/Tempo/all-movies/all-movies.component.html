@@ -1,0 +1,26 @@
+<section>
+  <div class="container">
+    <div class="w-75 m-auto py-5">
+      <input type="text" class="form-control" [(ngModel)]="serchs">
+</div>
+        <div class="row">
+            <ng-container *ngFor="let item of dataAllMovis|searchData:serchs">
+                <div class="col-md-2 cordMovies" >
+                    <a [routerLink]="['/ShowVideo',item.id  ,item.media_type]" routerLinkActive="router-link-active" >
+                        <div class="card text-left">
+                            <img class="card-img-top " src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}" alt="">
+                            <div class="card-body text-light textBode">
+                                <h6 class="card-title text-primary">{{item.title==undefined ?item.name:item.title}}</h6>
+                                <p class="card-text ">{{item.overview}}</p>
+                                <span class="vote">{{item.vote_average}}</span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+            </ng-container>
+
+        </div>
+    </div>
+</section>

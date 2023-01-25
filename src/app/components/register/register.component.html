@@ -1,0 +1,43 @@
+
+<section class="login">
+
+    <div class="container">
+        <div class="loginInpot">
+            <div class="py-3">
+                <form class="form-group" [formGroup]="frmGroup" (ngSubmit)="submitMethod()">
+                    <div class="mb-3 " > 
+                        <input type="text" class="form-control" formControlName="userName" placeholder="User Name" id="exampleInputPassword1">
+                      </div>
+                    <div class="mb-3 py-2"> 
+                      <input type="email" required class="form-control" id="exampleInputEmail1" formControlName="email" placeholder="Email address"  aria-describedby="emailHelp">
+                      <div class=""></div>
+                      <p id="emailHelp"   *ngIf="frmGroup.controls['email'].touched" class="form-text text-light fa-lg " >Plese Enter  Email Address</p>
+                    </div>
+
+                    <div class="mb-3 " style="position: relative;"> 
+                      <input type="password" formControlName="password" class="form-control" placeholder="Password" id="exampleInputPassword1">
+                        <div class="icon">
+                            <i class="fa fa-eye fa-lg" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="mb-3 " style="position: relative;"> 
+                        <input type="password" class="form-control" formControlName="ConfirmPassword" placeholder="Confirm Password" id="exampleInputPassword1">
+                          <div class="icon">
+                              <i class="fa fa-eye fa-lg" aria-hidden="true"></i>
+                          </div>
+                    </div>
+                    <div class="mb-3 " > 
+                        <input type="text" class="form-control" formControlName="phone" placeholder="phone Number" id="exampleInputPassword1">
+                      </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label text-light" for="exampleCheck1">Check me out</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" [disabled]="frmGroup.invalid">Create</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

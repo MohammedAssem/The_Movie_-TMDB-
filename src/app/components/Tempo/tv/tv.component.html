@@ -1,0 +1,29 @@
+
+<section style="background-color: black;">
+    <div class="container">
+        <div class="row">
+            <ng-container *ngFor="let item of dataMovies">
+                <div class="col-md-3">
+                
+                        <div class="card text-white bg-primary" style="border: none;">
+                           <a [routerLink]="['/ShowVideo',item.id,item.media_type]"  >    
+                                <img class="card-img-top" src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}" alt="">
+                                <div class="card-body textBode">
+                                    <h6 class="card-title text-primary">{{item.title==undefined ?item.name:item.title}}</h6>
+                                    <p class="card-text ">{{item.overview}}</p>
+                                    <span class="vote">{{item.vote_average}}</span>
+                                </div>
+                          </a>
+                        
+                        </div><br><br>
+                   
+                </div> 
+               
+            
+                
+            </ng-container> 
+        </div>
+    </div>
+   
+    
+</section>

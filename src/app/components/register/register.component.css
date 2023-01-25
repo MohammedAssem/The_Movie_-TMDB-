@@ -1,0 +1,27 @@
+.login{
+    height: 89vh;
+    background-image: url(../../../assets/photo-1553095066-5014bc7b7f2d.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.login .loginInpot{
+   
+    width: 24%;
+    height: 40vh; 
+    margin: auto ;
+}
+
+.login .icon{
+    position: absolute;
+    top: 17%;
+    right: 3%;
+    cursor: pointer;
+}
+.loginInpot p{
+    font-size: 18px;
+    padding-top: 10px; 
+}

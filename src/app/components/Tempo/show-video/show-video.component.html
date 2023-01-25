@@ -1,0 +1,22 @@
+<section class="ba-dark">
+   <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <img class="w-100" style="height: 90vh;" 
+                src="https://image.tmdb.org/t/p/w500/{{AllDataMovie.poster_path}}" alt="">
+            </div>
+            <div class="col-md-5">
+                <h1>{{AllDataMovie.name==undefined ?AllDataMovie.title
+                    :AllDataMovie.created_by.name}}</h1>
+                    <br>
+                <p>overview : {{AllDataMovie.overview==undefined ?AllDataMovie.body
+                        :AllDataMovie.overview}}</p>
+                        <br>
+                <h6>status : {{AllDataMovie.status}}</h6>
+                <h6>Vote Average : {{AllDataMovie.vote_average}}</h6>
+                <a class="btn btn-primary" href="{{AllDataMovie.homepage}}"> View</a>
+            </div>
+           
+        </div>
+    </div> 
+</section>

@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+    <div class="container-fluid ">
+      <a class="navbar-brand " routerLink="AllMovis">The Movie   (TMDB)</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav   mb-2 mb-lg-0 px-3"  style="margin: auto;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/AllMovis">{{"All"|translate}}</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/movies">{{"Movies"|translate}}</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/tv">{{"TV"|translate}}</a>
+          </li> 
+           
+        
+         
+        </ul>
+        <ul class="navbar-nav   mb-2 mb-lg-0 px-3"   >
+        
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/register">{{"Register"|translate}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-primary active m-2" aria-current="page" routerLink="/login">{{"login"|translate}}</a>
+          </li>
+        
+          <li>
+             <button class="btn btn-primary m-2" (click)="defLang()"> Ar </button>
+        
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
